@@ -1,0 +1,10 @@
+# Arduino build outputs
+*.hex
+*.elf
+*.bin
+*.eep
+*.map
+*.o
+*.d
+.DS_Store
+Thumbs.db
