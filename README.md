@@ -2,9 +2,9 @@
 
 **MindPulse** is an Arduino prototype designed to monitor classroom environmental conditions that may be associated with discomfort and reduced concentration. The supplied sketch combines sensor signals into **heuristic** indices and controls local indicators and actuators. These indices are prototype engineering measures, **not clinically validated measures of stress, cognitive load, or learning performance**.
 
-![MindPulse physical classroom prototype](images/prototype.jpg)
+![MindPulse physical classroom prototype](/prototype.jpg)
 
-*Photograph of the assembled cardboard classroom prototype with Arduino, breadboards and LCD.*
+*Photograph of the assembled cardboard classroom prototype with Arduino, breadboards, and LCD.*
 
 ## Features present in the supplied sketch
 
@@ -35,11 +35,7 @@
 
 ## How the prototype works
 
-```text
-Sensors → calibration / adaptive baselines → environmental risk estimates
-        → SI and CLI → indicators, LCD, buzzer and relay-controlled fan
-                    ↘ simple trend / time-to-threshold estimate
-```
+
 
 The code comments describe the weighted estimates as:
 
@@ -53,14 +49,14 @@ The code comments describe the weighted estimates as:
 1. Install Arduino IDE and select the compatible Arduino board.
 2. Install a compatible **LiquidCrystal_I2C** library and the **Adafruit DHT sensor library** (and dependencies).
 3. Wire the sensors and outputs according to the pin map; confirm relay power and electrical ratings.
-4. Open [`src/MindPulse(1).ino`](src/MindPulse(1).ino) and verify the LCD address and tuning constants.
+4. Open [`/MindPulse(1).ino`](/MindPulse(1).ino) and verify the LCD address and tuning constants.
 5. Upload, allow startup baseline calibration in normal room conditions, and view Serial Monitor for diagnostics.
 6. Press the mode button to cycle between lecture, group and exam contexts.
 
 ## Original design and connection references
 
 - [Illustrated Arduino wiring reference (PDF)](docs/MindPulse_Arduino_Wiring.pdf) — all sensors, LEDs, button, LCD, buzzer and fan relay.
-- [MindPulse concept and proposed architecture (PDF)](docs/MindPulse_Project_Concept.pdf) — motivation, sensing/cyber/actuation layers, mode selection and proposed risk-index approach.
+- [MindPulse concept and proposed architecture (PDF)](/MindPulse_Project_Concept.pdf) — motivation, sensing/cyber/actuation layers, mode selection and proposed risk-index approach.
 
 The proposal describes **intended system capabilities** and includes an explicitly labelled AI-generated concept image. The photograph above is the actual prototype. Proposed features (including any NeoPixel strip or predictive performance) should not be taken as verified unless they are present in the sketch and demonstrated.
 
@@ -70,8 +66,8 @@ This repository preserves the supplied project firmware. Real-world measurements
 
 ## Files
 
-- `src/MindPulse(1).ino` — original Arduino firmware
-- `images/prototype.jpg` — physical prototype photo
-- `docs/MindPulse_Arduino_Wiring.pdf` — illustrated wiring guide
-- `docs/MindPulse_Project_Concept.pdf` — original concept and architecture
+- `/MindPulse(1).ino` — original Arduino firmware
+- `/prototype.jpg` — physical prototype photo
+- `/MindPulse_Arduino_Wiring.pdf` — illustrated wiring guide
+- `/MindPulse_Project_Concept.pdf` — original concept and architecture
 - `README.md` and `.gitignore`
